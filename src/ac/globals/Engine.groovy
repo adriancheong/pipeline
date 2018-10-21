@@ -7,15 +7,10 @@ class Engine implements Serializable {
   Engine(script) {
     this.script = script
   }
-  
-  def hello(){
-    script.sh 'echo hello'
-    return 'Hello World!'
-  }
-  
+    
   def Checkout() {
   	script.stage('Checkout') {
-      script.checkout scm
+      script.checkout script.scm
     }
   }
   
