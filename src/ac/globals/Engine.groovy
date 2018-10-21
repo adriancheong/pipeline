@@ -9,8 +9,10 @@ class Engine implements Serializable {
   }
     
   def Checkout() {
-  	script.stage('Checkout') {
-      script.checkout script.scm
+    script.node {
+      script.stage('Checkout') {
+        script.checkout script.scm
+      }
     }
   }
   
