@@ -9,14 +9,17 @@ class Engine implements Serializable {
   }
     
   def Checkout() {
-//    script.node {
+    script.node {
       script.stage('Checkout') {
         script.checkout script.scm
       }
-  //  }
+    }
   }
   
-  def Build() {
+  def DockerBuild(image, steps) {
+    docker.image(image).inside('-u root') {
+      steps()
+    }
   }
 
   def Test() {
