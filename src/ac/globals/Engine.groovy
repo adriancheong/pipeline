@@ -9,11 +9,11 @@ class Engine implements Serializable {
   }
     
   def Checkout() {
-    script.node {
+//    script.node {
       script.stage('Checkout') {
         script.checkout script.scm
       }
-    }
+  //  }
   }
   
   def Build() {
