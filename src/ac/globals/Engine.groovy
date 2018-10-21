@@ -11,7 +11,7 @@ class Engine implements Serializable {
   def hello(){
     println 'hello'
     script.sh 'echo hello'
-    bat 'echo hello'
+    script.bat 'echo hello'
     return 'Hello World!'
   }
 }
