@@ -12,4 +12,22 @@ class Engine implements Serializable {
     script.sh 'echo hello'
     return 'Hello World!'
   }
+  
+  def Checkout() {
+  	stage('Checkout') {
+      script.checkout scm
+    }
+  }
+  
+  def Build() {
+  }
+
+  def Test() {
+  }
+  
+  def Scan() {
+  }
+  
+  def Publish() {
+  }
 }
