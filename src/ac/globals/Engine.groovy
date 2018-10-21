@@ -4,7 +4,7 @@ import groovy.json.JsonSlurperClassic
 
 class Engine implements Serializable {
   def hello(){
-    print 'hello'
+    println 'hello'
     //return 'Hello World!'
   }
 }
