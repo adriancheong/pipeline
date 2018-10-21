@@ -5,6 +5,8 @@ import groovy.json.JsonSlurperClassic
 class Engine implements Serializable {
   def hello(){
     println 'hello'
-    //return 'Hello World!'
+    sh 'echo hello'
+    bat 'echo hello'
+    return 'Hello World!'
   }
 }
