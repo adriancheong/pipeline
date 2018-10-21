@@ -14,7 +14,7 @@ class Engine implements Serializable {
   }
   
   def Checkout() {
-  	stage('Checkout') {
+  	script.stage('Checkout') {
       script.checkout scm
     }
   }
