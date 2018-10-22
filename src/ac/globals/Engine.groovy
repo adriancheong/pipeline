@@ -9,9 +9,9 @@ class Engine implements Serializable {
   }
     
   def Hello() {
-    //script.node {
+    script.node {
     script.sh 'echo Hello!'
-    //}
+    }
   }
   
   def Checkout() {
