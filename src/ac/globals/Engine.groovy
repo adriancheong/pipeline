@@ -34,8 +34,10 @@ class Engine implements Serializable {
           script.sh 'echo it is NOT instance of map'
           steps = [steps]
         }   
+                        for (step in steps) {
+                            step()
+                        }
 
-        steps()
 //        script.checkout script.scm
         
       }
