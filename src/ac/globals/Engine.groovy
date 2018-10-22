@@ -29,7 +29,7 @@ class Engine implements Serializable {
       script.stage('Checkout2') {
         script.checkout script.scm
       }
-      script.docker.image('microsoft/aspnetcore-build:2.0').inside('-u root') {
+      script.docker.image(image).inside('-u root') {
       }
     }
   }
