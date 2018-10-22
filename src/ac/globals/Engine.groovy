@@ -7,18 +7,6 @@ class Engine implements Serializable {
   Engine(script) {
     this.script = script
   }
-    
-  def RunFunc(func) {
-    script.node {
-      func()
-    }
-  }
-  
-  def Hello() {
-    script.node {
-    script.sh 'echo Hello!'
-    }
-  }
   
   def Checkout() {
     script.node {
@@ -35,12 +23,6 @@ class Engine implements Serializable {
       }
     }
   }
-      //      script.docker.image(image).inside('-u root') {
-  //      script.node {
-    //      steps()
-      //  }
-      //}
-
 
   def Test() {
   }
