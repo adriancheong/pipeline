@@ -16,11 +16,11 @@ class Engine implements Serializable {
   
   def Checkout() {
     script.node {
-      script.stage('Checkout') {
+      //script.stage('Checkout') {
         script.sh 'echo start of Checkout'
         script.checkout script.scm
         script.sh 'echo end of Checkout'
-      }
+      //}
     }
   }
   
