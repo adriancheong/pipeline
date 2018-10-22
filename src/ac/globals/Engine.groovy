@@ -9,9 +9,7 @@ class Engine implements Serializable {
   }
     
   def RunFunc(func) {
-    script.node {
       func()
-    }
   }
   
   def Hello() {
