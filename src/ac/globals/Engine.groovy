@@ -9,7 +9,9 @@ class Engine implements Serializable {
   }
     
   def RunFunc(func) {
+    script.node {
       func()
+    }
   }
   
   def Hello() {
@@ -21,22 +23,15 @@ class Engine implements Serializable {
   def Checkout() {
     script.node {
       script.stage('Checkout') {
-        script.sh 'echo start of Checkout'
         script.checkout script.scm
-        script.sh 'echo end of Checkout'
       }
     }
   }
   
   def DockerBuild(image, steps) {
     script.node {
-      script.stage('Checkout2') {
-        steps = [steps]
-        for (step in steps) {
-            step()
-        }        
-      }
       script.docker.image(image).inside('-u root') {
+        steps()
       }
     }
   }
