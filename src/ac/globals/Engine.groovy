@@ -29,13 +29,14 @@ class Engine implements Serializable {
       script.stage('Checkout2') {
         script.checkout script.scm
       }
+    }
+  }
       //      script.docker.image(image).inside('-u root') {
   //      script.node {
     //      steps()
       //  }
       //}
-    }
-  }
+
 
   def Test() {
   }
