@@ -17,9 +17,11 @@ class Engine implements Serializable {
   }
   
   def DockerBuild(image, steps) {
-    script.node {
-      script.docker.image(image).inside('-u root') {
-        steps()
+    script.stage('DockerBuild') {
+      script.node {
+        script.docker.image(image).inside('-u root') {
+          steps()
+        }
       }
     }
   }
