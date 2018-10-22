@@ -27,7 +27,14 @@ class Engine implements Serializable {
   def DockerBuild(image, steps) {
     script.node {
       script.stage('Checkout2') {
-        steps = [steps]
+        if (steps instanceof Map) {
+          script.sh 'echo it is instance of map'
+          steps = steps.values()
+        } else {
+          script.sh 'echo it is NOT instance of map'
+          steps = [steps]
+        }   
+
         steps()
 //        script.checkout script.scm
         
