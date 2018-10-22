@@ -28,6 +28,7 @@ class Engine implements Serializable {
     script.node {
       script.stage('Checkout2') {
         script.checkout script.scm
+        steps()
       }
       script.docker.image(image).inside('-u root') {
       }
