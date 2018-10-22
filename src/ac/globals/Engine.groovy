@@ -8,6 +8,12 @@ class Engine implements Serializable {
     this.script = script
   }
     
+  def RunFunc(func) {
+    script.node {
+      func()
+    }
+  }
+  
   def Hello() {
     script.node {
     script.sh 'echo Hello!'
