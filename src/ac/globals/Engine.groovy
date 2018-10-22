@@ -8,6 +8,10 @@ class Engine implements Serializable {
     this.script = script
   }
     
+  def Hello() {
+    script.sh 'echo Hello!'
+  }
+  
   def Checkout() {
     script.node {
       script.stage('Checkout') {
