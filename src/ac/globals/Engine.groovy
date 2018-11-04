@@ -20,10 +20,6 @@ class Engine implements Serializable {
     script.node {
       script.stage('DockerBuild') {
         script.docker.image(image).inside('-u root') {
-              script.dir('temp') {
-      script.sh 'pwd'
-      script.sh 'ls'
-    }
           steps()
         }
       }
