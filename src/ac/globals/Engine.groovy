@@ -17,6 +17,10 @@ class Engine implements Serializable {
   }
   
   def RunStepsInDockerImage(image, steps) {
+    script.dir('temp') {
+      script.sh 'pwd'
+      script.sh 'ls'
+    }
     script.node {
       script.stage('DockerBuild') {
         script.docker.image(image).inside('-u root') {
