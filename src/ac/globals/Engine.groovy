@@ -36,6 +36,14 @@ class Engine implements Serializable {
     }
   }
 
+  def BuildDockerFile() {
+    script.node {
+      script.stage('Build Docker File') {
+        def image = script.docker.build("adriancheong/${JOB_NAME}:${BUILD_NUMBER}".toLowerCase())
+      }
+    }
+  }
+  
   def Test() {
   }
   
